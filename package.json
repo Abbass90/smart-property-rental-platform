@@ -1,0 +1,23 @@
+{
+  "name": "smart-property-rental-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Final year project for smart property rental management",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @sprm/api --filter @sprm/web dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r --if-present test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,css,yml,yaml}\"",
+    "db:generate": "pnpm --filter @sprm/api prisma:generate",
+    "db:migrate": "pnpm --filter @sprm/api prisma:migrate",
+    "db:studio": "pnpm --filter @sprm/api prisma:studio"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@11.19.0"
+}
